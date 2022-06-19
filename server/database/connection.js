@@ -3,12 +3,11 @@ const mongoose = require('mongoose');
 const connectDB = async () => {
     try{
         // mongodb connection string
-        const con = await mongoose.connect("mongodb+srv://liamsegura:ik1imenAAL00tiPt@cluster0.8lm56yo.mongodb.net/?retryWrites=true&w=majority", {
+        const con = await mongoose.connect(process.env.MONGO_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useFindAndModify: false,
             useCreateIndex: true,
-            useMongoClient:true
         })
 
         console.log(`MongoDB connected : ${con.connection.host}`);

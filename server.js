@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require("body-parser");
 const path = require('path');
-const PORT = process.env.PORT || 80
+const port = process.env.PORT || 3000;
 
 const connectDB = require('./server/database/connection');
 
@@ -35,6 +35,6 @@ app.use('/', require('./server/routes/router'))
 
 
 
-app.listen(process.env.PORT || 80, err => 
+app.listen(process.env.PORT || port, err => 
     { if(err) throw err;
-     console.log(`Server is running on http://localhost:${PORT}`)});
+     console.log(`Server is running on http://localhost:${port}`)});
