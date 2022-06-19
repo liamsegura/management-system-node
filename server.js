@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require("body-parser");
 const path = require('path');
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 7000
 
 const connectDB = require('./server/database/connection');
 
